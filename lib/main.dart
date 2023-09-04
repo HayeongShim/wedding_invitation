@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp (
       title: '균호&하영 결혼합니다',
       theme: ThemeData (
+        fontFamily: 'GowunBatang',
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       ),
       home: MyHomePage(),

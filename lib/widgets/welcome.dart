@@ -7,13 +7,13 @@ Widget _buildTitle() {
       const Text (
         '24 | 03 | 03',
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 20.0),
+        style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
       ),
-      const SizedBox(height: 10),
+      const SizedBox(height: 8),
       const Text (
         'SUNDAY',
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 14.0),
+        style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w700, letterSpacing: 2.0),
       ),
     ]
   );
@@ -48,7 +48,7 @@ Widget _buildEventInfo() {
       const Text (
         '유균호 | 심하영',
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 20.0),
+        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 20),
       const Text (
