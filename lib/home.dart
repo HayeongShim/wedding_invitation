@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:confetti/confetti.dart';
 import 'package:wedding_invitation/widgets/welcome.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -7,16 +8,50 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool isPlaying = false;
+  final controller = ConfettiController();
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Welcome(),
-          ],
+  void initState() {
+    super.initState();
+    controller.play();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => Stack (
+    alignment: Alignment.topCenter,
+    children: [
+      Scaffold (
+        body: SingleChildScrollView (
+          child: Column (
+            children: [
+              Welcome(),
+            ],
+          ),
         ),
       ),
-    );
-  }
+      ConfettiWidget(
+        confettiController: controller,
+        shouldLoop: false,
+
+        blastDirectionality: BlastDirectionality.explosive,
+        emissionFrequency: 0.05,
+        numberOfParticles: 1,
+        gravity: 0.1,
+
+        createParticlePath: (size) {
+          final path = Path();
+          path.addRect(Rect.fromPoints(Offset(-5, -5), Offset(10, 1)));
+          //path.addOval(Rect.fromCircle(center: Offset.zero, radius: 5));
+          return path;
+        },
+      )
+    ],
+  );
 }
