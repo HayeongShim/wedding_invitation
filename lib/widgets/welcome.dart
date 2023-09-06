@@ -80,7 +80,6 @@ class Welcome extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           _buildEventInfo(),
-          //_buildDday(context),
         ],
       )
     );
