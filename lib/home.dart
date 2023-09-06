@@ -8,7 +8,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool isPlaying = false;
   final controller = ConfettiController();
 
   @override
@@ -38,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       ConfettiWidget(
         confettiController: controller,
-        shouldLoop: false,
+        shouldLoop: true,
 
         blastDirectionality: BlastDirectionality.explosive,
         emissionFrequency: 0.05,
