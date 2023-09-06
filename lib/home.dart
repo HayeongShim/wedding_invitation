@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:confetti/confetti.dart';
 import 'package:wedding_invitation/widgets/welcome.dart';
+import 'package:wedding_invitation/widgets/invitation.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -31,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column (
             children: [
               Welcome(),
+              Invitation(),
             ],
           ),
         ),
