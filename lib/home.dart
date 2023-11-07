@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:confetti/confetti.dart';
 import 'package:wedding_invitation/widgets/welcome.dart';
 import 'package:wedding_invitation/widgets/invitation.dart';
+import 'package:wedding_invitation/widgets/gallery.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -33,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Welcome(),
               Invitation(),
+              Gallery(),
             ],
           ),
         ),

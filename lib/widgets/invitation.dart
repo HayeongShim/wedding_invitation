@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+final Color indiBlueColor = Color.fromRGBO(102, 142, 170, 1.0);
+final Color indiPinkColor = Color.fromRGBO(206, 131, 131, 1.0);
+
 Widget _buildName(String father, mother, relation, name) {
   return Center (
     child: Row (
@@ -33,14 +36,14 @@ void _sendSms(String phoneNumber) async {
   }
 }
 
-Widget _buildContactInfo(String who, name, number) {
+Widget _buildContactInfo(String who, name, number, Color color) {
   return Row (
     children: [
       Expanded(
         flex: 2,
         child: Align(
           alignment: Alignment.center,
-          child: Text('$who'),
+          child: Text('$who', style: TextStyle(color: color)),
         ),
       ),
       Expanded(
@@ -56,7 +59,7 @@ Widget _buildContactInfo(String who, name, number) {
           alignment: Alignment.center,
           child: TextButton(
             onPressed: () { _launchPhoneCall(number); },
-            child: Text('📞', style: TextStyle(color: Colors.black)),
+            child: Icon(Icons.phone, color: color, size: 24.0),
           )
         ),
       ),
@@ -66,7 +69,7 @@ Widget _buildContactInfo(String who, name, number) {
           alignment: Alignment.center,
           child: TextButton(
             onPressed: () { _sendSms(number); },
-            child: Text('✉️', style: TextStyle(color: Colors.black)),
+            child: Icon(Icons.email, color: color, size: 24.0),
           )
         ),
       ),
@@ -79,21 +82,21 @@ Widget _buildPopUpContent() {
     constraints: BoxConstraints(maxHeight: 250),
     child: Column (
       children: [
-        _buildContactInfo('신랑', 'ㅇㄱㄴ', '010-1234-5678'),
+        _buildContactInfo('신랑', 'ㅇㄱㄴ', '010-1234-5678', indiBlueColor),
         const SizedBox(height: 10),
-        _buildContactInfo('신랑 아버지', '아버지', '010-1234-5679'),
+        _buildContactInfo('신랑 아버지', '아버지', '010-1234-5679', indiBlueColor),
         const SizedBox(height: 10),
-        _buildContactInfo('신랑 어머니', '어머니', '010-1234-5679'),
+        _buildContactInfo('신랑 어머니', '어머니', '010-1234-5679', indiBlueColor),
 
         const SizedBox(height: 20),
         Divider(thickness: 1, height: 1,),
         const SizedBox(height: 20),
 
-        _buildContactInfo('신부', 'ㅅㅎㅇ', '010-1234-5678'),
+        _buildContactInfo('신부', 'ㅅㅎㅇ', '010-1234-5678', indiPinkColor),
         const SizedBox(height: 10),
-        _buildContactInfo('신부 아버지', '아버지', '010-1234-5679'),
+        _buildContactInfo('신부 아버지', '아버지', '010-1234-5679', indiPinkColor),
         const SizedBox(height: 10),
-        _buildContactInfo('신부 어머니', '어머니', '010-1234-5679'),
+        _buildContactInfo('신부 어머니', '어머니', '010-1234-5679', indiPinkColor),
       ],
     )
   );

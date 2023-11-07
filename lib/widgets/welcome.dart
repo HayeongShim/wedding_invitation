@@ -54,7 +54,7 @@ Widget _buildEventInfo() {
       const Text (
         '2024년 3월 3일 일요일 낮 12시\n수원 노블레스 웨딩홀 7층',
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 16.0),
+        style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 2),
       ),
     ]
   );
