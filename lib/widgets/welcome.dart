@@ -43,16 +43,16 @@ Widget _buildDday(BuildContext context) {
 }
 
 Widget _buildEventInfo() {
-  return Column (
+  return const Column (
     children: [
-      const Text (
+      Text (
         '유균호 | 심하영',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
       ),
-      const SizedBox(height: 20),
-      const Text (
-        '2024년 3월 3일 일요일 낮 12시\n수원 노블레스 웨딩홀 7층',
+      SizedBox(height: 20),
+      Text (
+        '2024년 3월 3일 일요일 낮 12시\n수원 노블레스 웨딩 컨벤션 7층',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 2),
       ),
@@ -71,9 +71,9 @@ class Welcome extends StatelessWidget {
           _buildTitle(),
           const SizedBox(height: 30),
           Container (
-            height: MediaQuery.of(context).size.height * 0.75,
+            height: 600.0,
             child: Image.asset(
-              'assets/images/img_25563_1.jpg',
+              'assets/images/KakaoTalk_20231125_001141292.jpg',
               fit: BoxFit.fitWidth,
               width: double.infinity,
             ),

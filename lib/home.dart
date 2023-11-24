@@ -3,6 +3,7 @@ import 'package:confetti/confetti.dart';
 import 'package:wedding_invitation/widgets/welcome.dart';
 import 'package:wedding_invitation/widgets/invitation.dart';
 import 'package:wedding_invitation/widgets/gallery.dart';
+import 'package:wedding_invitation/widgets/map.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -11,6 +12,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final controller = ConfettiController();
+
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -35,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Welcome(),
               Invitation(),
               Gallery(),
+              Map(),
             ],
           ),
         ),

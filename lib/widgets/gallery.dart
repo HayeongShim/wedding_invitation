@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'dart:ui';
 
 class Gallery extends StatefulWidget {
-  final List<String> imagePaths = [
-    'assets/images/flower.jpg',
-    'assets/images/img_25563_1.jpg',
-    'assets/images/img_25563_1.jpg',
-    'assets/images/img_25563_1.jpg',
-    // 추가 이미지 경로
+  final List<ImageProvider> imagePaths = [
+    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
   ];
   
   @override
@@ -22,19 +21,27 @@ class _GalleryState extends State<Gallery> {
     return Container(
       margin: const EdgeInsetsDirectional.all(20.0),
       height: 500.0,
-      child: PageView.builder(
-        controller: _pageController,
-        pageSnapping: true,
-        itemCount: widget.imagePaths.length,
-        itemBuilder: (context, index) {
-          return Center(
-            child: Image.asset(
-              widget.imagePaths[index],
-              fit: BoxFit.cover, // 이미지가 화면에 맞게 표시됩니다.
-            ),
-          );
-        },
-      ),
+      child: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(
+          dragDevices: {
+            PointerDeviceKind.mouse, PointerDeviceKind.touch, PointerDeviceKind.stylus,
+            PointerDeviceKind.trackpad, PointerDeviceKind.unknown
+          }
+        ),
+        child: PageView.builder(
+          controller: _pageController,
+          physics: const AlwaysScrollableScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          itemCount: widget.imagePaths.length,
+          itemBuilder: (context, index) {
+            return Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(image: widget.imagePaths[index]),
+              )
+            );
+          }
+        ),
+      )
     );
   }
   
