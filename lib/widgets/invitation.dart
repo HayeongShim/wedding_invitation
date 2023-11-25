@@ -10,9 +10,9 @@ Widget _buildName(String father, mother, relation, name) {
     child: Row (
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('$father · $mother', style: TextStyle(fontSize: 18)),
+        Text('$father · $mother', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         Text(' 의 $relation ', style: TextStyle(fontSize: 13)),
-        Text(name, style: TextStyle(fontSize: 18)),
+        Text(name, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
       ],
     )
   );
@@ -82,21 +82,21 @@ Widget _buildPopUpContent() {
     constraints: BoxConstraints(maxHeight: 250),
     child: Column (
       children: [
-        _buildContactInfo('신랑', 'ㅇㄱㄴ', '010-1234-5678', indiBlueColor),
-        const SizedBox(height: 5),
-        _buildContactInfo('신랑 아버지', '아버지', '010-1234-5679', indiBlueColor),
-        const SizedBox(height: 5),
-        _buildContactInfo('신랑 어머니', '어머니', '010-1234-5679', indiBlueColor),
+        _buildContactInfo('신랑', '유균호', '010-1234-5678', indiBlueColor),
+        const SizedBox(height: 2),
+        _buildContactInfo('신랑 아버지', '유병수', '010-1234-5679', indiBlueColor),
+        const SizedBox(height: 2),
+        _buildContactInfo('신랑 어머니', '나윤옥', '010-1234-5679', indiBlueColor),
 
         const SizedBox(height: 10),
         Divider(thickness: 1, height: 1,),
         const SizedBox(height: 10),
 
-        _buildContactInfo('신부', 'ㅅㅎㅇ', '010-1234-5678', indiPinkColor),
-        const SizedBox(height: 5),
-        _buildContactInfo('신부 아버지', '아버지', '010-1234-5679', indiPinkColor),
-        const SizedBox(height: 5),
-        _buildContactInfo('신부 어머니', '어머니', '010-1234-5679', indiPinkColor),
+        _buildContactInfo('신부', '심하영', '010-1234-5678', indiPinkColor),
+        const SizedBox(height: 2),
+        _buildContactInfo('신부 아버지', '심영석', '010-1234-5679', indiPinkColor),
+        const SizedBox(height: 2),
+        _buildContactInfo('신부 어머니', '류지현', '010-1234-5679', indiPinkColor),
       ],
     )
   );
@@ -109,7 +109,8 @@ Widget _buildContactButton(BuildContext context) {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Center(child: Text('연락하기', style: TextStyle(fontSize: 18))),
+            title: Center(
+              child: Text('연락하기', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
             content: _buildPopUpContent(),
           );
         },
@@ -117,7 +118,7 @@ Widget _buildContactButton(BuildContext context) {
     },
     child: Text(
       '                 📞 연락하기                  ',
-      style: TextStyle(color: Color.fromRGBO(41, 82, 56, 100))
+      style: TextStyle(color: Color.fromRGBO(41, 82, 56, 100), fontWeight: FontWeight.w600)
     ),
     style: OutlinedButton.styleFrom(
       shape: RoundedRectangleBorder(
@@ -137,25 +138,28 @@ class Invitation extends StatelessWidget {
       margin: const EdgeInsetsDirectional.all(20.0),
       child: Column (
         children: [
-          const SizedBox(height: 50),
           Container (
             height: 150,
-            child: Image.asset('assets/images/flower.jpg', fit: BoxFit.contain,),
+            child: Image.asset('assets/images/wizard.jpg', fit: BoxFit.contain,),
           ),
           
-          const SizedBox(height: 30),
+          const SizedBox(height: 40),
           const AutoSizeText(
             '소중하고 감사한 당신을 초대합니다.',
             style: TextStyle(
-              color: const Color.fromRGBO(41, 82, 56, 100),
-              fontSize: 18)
+              color: Color.fromRGBO(41, 82, 56, 100),
+              fontSize: 18,
+              fontWeight: FontWeight.w600)
           ),
 
           const SizedBox(height: 40),
           const AutoSizeText(
             '연인으로서 맞이한 열 번의 봄날을 뒤로 하고,\n이제는 부부로서의 첫 번째 봄을 맞이하고자 합니다.\n둘이서 만들어갈 나날의 첫 시작을 함께 밝혀주시면\n더없는 기쁨으로 간직하겠습니다.',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 15, height: 2),
+            style: TextStyle(
+              fontSize: 15,
+              height: 2,
+              fontWeight: FontWeight.w600),
           ),
 
           const SizedBox(height: 50),

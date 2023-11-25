@@ -4,6 +4,7 @@ import 'package:wedding_invitation/widgets/welcome.dart';
 import 'package:wedding_invitation/widgets/invitation.dart';
 import 'package:wedding_invitation/widgets/gallery.dart';
 import 'package:wedding_invitation/widgets/map.dart';
+import 'package:wedding_invitation/widgets/guide.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -39,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Invitation(),
               Gallery(),
               Map(),
+              Guide()
             ],
           ),
         ),

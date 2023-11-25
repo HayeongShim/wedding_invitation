@@ -64,7 +64,6 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container (
-      margin: const EdgeInsetsDirectional.all(20.0),
       child: Column (
         children: [
           const SizedBox(height: 20),
