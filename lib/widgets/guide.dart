@@ -27,10 +27,6 @@ class Guide extends StatelessWidget {
             '식사는 뷔페식이며, 양쪽의 메뉴가 다르게 구성되어 있습니다.',
             style: TextStyle(height: 2, fontWeight: FontWeight.w600)
           ),
-          Text(
-            '참고하시어 맛있는 점심 식사 하셔요!',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
-          ),
         ],
       )
     );

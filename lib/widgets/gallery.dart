@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'dart:ui';
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
+import 'package:wedding_invitation/widgets/imagePage.dart';
 
 class Gallery extends StatefulWidget {
   final List<ImageProvider> imagePaths = [
+    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
+    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
     AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
     AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
     AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
@@ -31,53 +43,37 @@ class _GalleryState extends State<Gallery> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsetsDirectional.all(20.0),
-      height: 500.0,
-      child: Column(
-        children: [
-          Expanded(
-            child: ScrollConfiguration(
-              behavior: ScrollConfiguration.of(context).copyWith(
-                dragDevices: {
-                  PointerDeviceKind.mouse, PointerDeviceKind.touch, PointerDeviceKind.stylus,
-                  PointerDeviceKind.trackpad, PointerDeviceKind.unknown
-                }
-              ),
-              child: PageView.builder(
-                controller: _pageController,
-                physics: const AlwaysScrollableScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemCount: widget.imagePaths.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(image: widget.imagePaths[index]),
-                    )
-                  );
-                }
+      child: GridView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        scrollDirection: Axis.vertical,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3, // 한 행에 표시할 썸네일 수
+        ),
+        itemCount: widget.imagePaths.length,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ImagePage(
+                    initialIndex: index,
+                    imageProviders: widget.imagePaths,
+                  ),
+                ),
+              );
+            },
+            child: Container(
+              margin: EdgeInsets.all(4.0),
+              child: Image(
+                image: widget.imagePaths[index],
+                fit: BoxFit.cover,
               ),
             ),
-          ),
-          SizedBox(height: 10.0),
-          _buildPageIndicator(),
-        ]
+          );
+        },
       ),
-    );
-  }
-
-  Widget _buildPageIndicator() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(widget.imagePaths.length, (index) {
-        return Container(
-          width: 8.0,
-          height: 8.0,
-          margin: EdgeInsets.symmetric(horizontal: 4.0),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: _currentPage == index ? Colors.blue : Colors.grey,
-          ),
-        );
-      }),
     );
   }
   
