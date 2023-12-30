@@ -60,7 +60,7 @@ class _ImagePageState extends State<ImagePage> {
               color: Colors.black,
             ),
             pageController: _pageController,
-            enableRotation: true,
+            enableRotation: false,
             onPageChanged: (index) {
               setState(() {
                 _currentIndex = index;

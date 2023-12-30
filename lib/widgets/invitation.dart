@@ -79,6 +79,7 @@ Widget _buildContactInfo(String who, name, number, Color color) {
 
 Widget _buildPopUpContent() {
   return Container(
+    width: 500.0,
     constraints: BoxConstraints(maxHeight: 250),
     child: Column (
       children: [
@@ -135,11 +136,13 @@ class Invitation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container (
+      width: 500.0,
       margin: const EdgeInsetsDirectional.all(20.0),
       child: Column (
         children: [
           Container (
             height: 150,
+            width: 500.0,
             child: Image.asset('assets/images/wizard.jpg', fit: BoxFit.contain,),
           ),
           

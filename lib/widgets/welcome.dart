@@ -74,7 +74,6 @@ class Welcome extends StatelessWidget {
             child: Image.asset(
               'assets/images/KakaoTalk_20231125_001141292.jpg',
               fit: BoxFit.fitWidth,
-              width: double.infinity,
             ),
           ),
           const SizedBox(height: 30),

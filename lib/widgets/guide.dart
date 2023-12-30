@@ -8,6 +8,7 @@ class Guide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 500.0,
       margin: EdgeInsetsDirectional.all(20.0),
       child: const Column(
         children: [

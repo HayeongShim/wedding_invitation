@@ -7,18 +7,24 @@ import 'package:wedding_invitation/widgets/imagePage.dart';
 
 class Gallery extends StatefulWidget {
   final List<ImageProvider> imagePaths = [
-    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001038144.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001141292.jpg'),
-    AssetImage('assets/images/KakaoTalk_20231125_001212532.jpg'),
+    AssetImage('assets/images/white_0.JPG'),
+    AssetImage('assets/images/white_1.JPG'),
+    AssetImage('assets/images/white_3.JPG'),
+    AssetImage('assets/images/white_4.JPG'),
+    AssetImage('assets/images/white_5.JPG'),
+    AssetImage('assets/images/white_6.JPG'),
+    AssetImage('assets/images/white_7.JPG'),
+    AssetImage('assets/images/green_0.JPG'),
+    AssetImage('assets/images/green_1.JPG'),
+    AssetImage('assets/images/green_2.JPG'),
+    AssetImage('assets/images/green_3.JPG'),
+    AssetImage('assets/images/green_4.JPG'),
+    AssetImage('assets/images/blue_0.JPG'),
+    AssetImage('assets/images/blue_1.JPG'),
+    AssetImage('assets/images/blue_3.JPG'),
+    AssetImage('assets/images/blue_4.JPG'),
+    AssetImage('assets/images/blue_5.JPG'),
+    AssetImage('assets/images/blue_6.JPG'),
   ];
   
   @override
@@ -42,6 +48,7 @@ class _GalleryState extends State<Gallery> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 500.0,
       margin: const EdgeInsetsDirectional.all(20.0),
       child: GridView.builder(
         shrinkWrap: true,
