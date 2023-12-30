@@ -5,6 +5,8 @@ import 'package:wedding_invitation/widgets/invitation.dart';
 import 'package:wedding_invitation/widgets/gallery.dart';
 import 'package:wedding_invitation/widgets/map.dart';
 import 'package:wedding_invitation/widgets/guide.dart';
+import 'package:wedding_invitation/widgets/bankAccount.dart';
+import 'package:wedding_invitation/widgets/developedBy.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -39,8 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
               Welcome(),
               Invitation(),
               Gallery(),
+              const SizedBox(height: 20),
               Map(),
-              Guide()
+              const SizedBox(height: 20),
+              Guide(),
+              const SizedBox(height: 20),
+              BankAccount(),
+              const SizedBox(height: 20),
+              DevelopedBy(),
             ],
           ),
         ),

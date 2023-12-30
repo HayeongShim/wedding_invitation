@@ -63,8 +63,8 @@ class _GalleryState extends State<Gallery> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => ImagePage(
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) => ImagePage(
                     initialIndex: index,
                     imageProviders: widget.imagePaths,
                   ),

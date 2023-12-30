@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/material.dart';
 import 'dart:html' as html;
 import 'dart:ui' as ui;
 
@@ -25,7 +24,7 @@ class _MapState extends State<Map> {
   }
 
   @override
-Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
   return Center(
     child: Container(
       margin: EdgeInsetsDirectional.all(20.0),
@@ -55,7 +54,6 @@ Widget build(BuildContext context) {
           ),
           Text(
             '수인분당선 수원시청역 5번 출구 셔틀버스 수시 운행',
-            style: TextStyle(fontWeight: FontWeight.w600)
           ),
 
           Text(
@@ -64,41 +62,41 @@ Widget build(BuildContext context) {
           ),
           Text(
             '수원역(4번 출구) → 동수원병원 하차 (13-4, 83-1, 720-2)',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
+            style: TextStyle(height: 2,)
           ),
           Text(
             '수원버스터미널 → 수병원 하차 (300)',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
+            style: TextStyle(height: 2,)
           ),
           Text(
             '망포역(4번 출구) → 동수원사거리 하차 (62-1)',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
+            style: TextStyle(height: 2,)
           ),
           Text(
             '광교중앙역(3번 출구) → 동수원사거리 하차 (13-4)',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
+            style: TextStyle(height: 2,)
           ),
           Text(
             '강남역(나라빌딩앞) → 수원월드컵경기장 하차 (3007)',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
+            style: TextStyle(height: 2,)
           ),
 
-          Text(
-            '주차',
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 3)
-          ),
-          Text(
-            '예식장 주차타워 내 1시간 30분 무료 주차가 가능합니다.',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
-          ),Text(
-            '골목에 위치한 관계로 혼잡할 수 있는점 너그러이 양해 부탁드립니다.',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
-          )
-        ],
+            Text(
+              '주차',
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 3)
+            ),
+            Text(
+              '예식장 주차타워 내 1시간 30분 무료 주차가 가능합니다.',
+              style: TextStyle(height: 2,)
+            ),
+            Text(
+              '골목에 위치하여 혼잡할 수 있는점 너그러이 양해 부탁드립니다.',
+              style: TextStyle(height: 2,)
+            )
+          ],
+        ),
       ),
-    ),
-  );
-}
-
+    );
+  }
 }
 

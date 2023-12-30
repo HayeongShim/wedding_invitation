@@ -22,11 +22,11 @@ class Guide extends StatelessWidget {
           ),
           Text(
             '식사는 예식 30분 전인 11시 30분부터 가능합니다. (6층 연회장)',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
+            style: TextStyle(height: 2,)
           ),
           Text(
             '식사는 뷔페식이며, 양쪽의 메뉴가 다르게 구성되어 있습니다.',
-            style: TextStyle(height: 2, fontWeight: FontWeight.w600)
+            style: TextStyle(height: 2,)
           ),
         ],
       )

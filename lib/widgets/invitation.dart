@@ -80,24 +80,24 @@ Widget _buildContactInfo(String who, name, number, Color color) {
 Widget _buildPopUpContent() {
   return Container(
     width: 500.0,
-    constraints: BoxConstraints(maxHeight: 250),
+    constraints: BoxConstraints(maxHeight: 200),
     child: Column (
       children: [
-        _buildContactInfo('신랑', '유균호', '010-1234-5678', indiBlueColor),
-        const SizedBox(height: 2),
-        _buildContactInfo('신랑 아버지', '유병수', '010-1234-5679', indiBlueColor),
-        const SizedBox(height: 2),
-        _buildContactInfo('신랑 어머니', '나윤옥', '010-1234-5679', indiBlueColor),
+        _buildContactInfo('신랑', '유균호', '010-8754-9911', indiBlueColor),
+        const SizedBox(height: 1),
+        _buildContactInfo('신랑 아버지', '유병수', '010-3679-2570', indiBlueColor),
+        const SizedBox(height: 1),
+        _buildContactInfo('신랑 어머니', '나윤옥', '010-8648-6008', indiBlueColor),
 
         const SizedBox(height: 10),
         Divider(thickness: 1, height: 1,),
         const SizedBox(height: 10),
 
-        _buildContactInfo('신부', '심하영', '010-1234-5678', indiPinkColor),
-        const SizedBox(height: 2),
-        _buildContactInfo('신부 아버지', '심영석', '010-1234-5679', indiPinkColor),
-        const SizedBox(height: 2),
-        _buildContactInfo('신부 어머니', '류지현', '010-1234-5679', indiPinkColor),
+        _buildContactInfo('신부', '심하영', '010-2837-2059', indiPinkColor),
+        const SizedBox(height: 1),
+        _buildContactInfo('신부 아버지', '심영석', '010-2837-0600', indiPinkColor),
+        const SizedBox(height: 1),
+        _buildContactInfo('신부 어머니', '류지현', '010-2808-2083', indiPinkColor),
       ],
     )
   );
