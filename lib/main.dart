@@ -11,23 +11,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp (
-      title: '균호&하영 결혼합니다',
+      title: '유균호❤️심하영 결혼합니다.',
       theme: ThemeData (
         fontFamily: 'GowunBatang',
         scaffoldBackgroundColor: const Color(0xFFFFFFFF),
         textTheme: TextTheme(
-          bodyText1: TextStyle(color: Colors.black), // 일반 텍스트
-          bodyText2: TextStyle(color: Colors.black), // 일반 텍스트
-          subtitle1: TextStyle(color: Colors.black), // 부제목 1
-          subtitle2: TextStyle(color: Colors.black), // 부제목 2
-          headline1: TextStyle(color: Colors.black), // 제목 1
-          headline2: TextStyle(color: Colors.black), // 제목 2
-          headline3: TextStyle(color: Colors.black), // 제목 3
-          headline4: TextStyle(color: Colors.black), // 제목 4
-          headline5: TextStyle(color: Colors.black), // 제목 5
-          headline6: TextStyle(color: Colors.black), // 제목 6
-          overline: TextStyle(color: Colors.black), // 오버라인
-        ),
+        bodyText1: TextStyle(color: const Color(0xFF000000)), // 일반 텍스트 (검은색)
+        bodyText2: TextStyle(color: const Color(0xFF000000)), // 일반 텍스트 (검은색)
+        subtitle1: TextStyle(color: const Color(0xFF000000)), // 부제목 1 (검은색)
+        subtitle2: TextStyle(color: const Color(0xFF000000)), // 부제목 2 (검은색)
+        headline1: TextStyle(color: const Color(0xFF000000)), // 제목 1 (검은색)
+        headline2: TextStyle(color: const Color(0xFF000000)), // 제목 2 (검은색)
+        headline3: TextStyle(color: const Color(0xFF000000)), // 제목 3 (검은색)
+        headline4: TextStyle(color: const Color(0xFF000000)), // 제목 4 (검은색)
+        headline5: TextStyle(color: const Color(0xFF000000)), // 제목 5 (검은색)
+        headline6: TextStyle(color: const Color(0xFF000000)), // 제목 6 (검은색)
+        overline: TextStyle(color: const Color(0xFF000000)), // 오버라인 (검은색)
+      ),
       ),
       home: Container(
         width: 500.0,

@@ -4,16 +4,25 @@ import 'package:auto_size_text/auto_size_text.dart';
 Widget _buildTitle() {
   return Column (
     children: [
+      /*
       const Text (
-        '24 | 03 | 03',
+        '24 | 01 | 26',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
       ),
       const SizedBox(height: 8),
       const Text (
-        'SUNDAY',
+        'FRIDAY',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w700, letterSpacing: 2.0),
+      ),
+      */
+      Container (
+        height: 340.0,
+        child: Image.asset(
+          'assets/images/0303.png',
+          fit: BoxFit.fitWidth,
+        ),
       ),
     ]
   );
@@ -43,8 +52,9 @@ Widget _buildDday(BuildContext context) {
 }
 
 Widget _buildEventInfo() {
-  return const Column (
+  return Column (
     children: [
+      /*
       Text (
         '유균호 | 심하영',
         textAlign: TextAlign.center,
@@ -52,9 +62,22 @@ Widget _buildEventInfo() {
       ),
       SizedBox(height: 20),
       Text (
-        '2024년 3월 3일 일요일 낮 12시\n수원 노블레스 웨딩 컨벤션 7층',
+        '2024년 3월 3일 일요일 낮 12시',
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 2),
+      ),
+      Text (
+        '수원 노블레스 웨딩 컨벤션 7층',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 2),
+      ),
+      */
+      Container (
+        height: 240.0,
+        child: Image.asset(
+          'assets/images/intro.png',
+          fit: BoxFit.fitWidth,
+        ),
       ),
     ]
   );

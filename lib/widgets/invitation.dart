@@ -50,7 +50,7 @@ Widget _buildContactInfo(String who, name, number, Color color) {
         flex: 2,
         child: Align(
           alignment: Alignment.center,
-          child: Text('$name'),
+          child: Text('$name', style: TextStyle(color: Colors.grey)),
         ),
       ),
       Expanded(
@@ -80,8 +80,8 @@ Widget _buildContactInfo(String who, name, number, Color color) {
 Widget _buildPopUpContent() {
   return Container(
     width: 500.0,
-    constraints: BoxConstraints(maxHeight: 200),
-    child: Column (
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         _buildContactInfo('신랑', '유균호', '010-8754-9911', indiBlueColor),
         const SizedBox(height: 1),
@@ -99,9 +99,10 @@ Widget _buildPopUpContent() {
         const SizedBox(height: 1),
         _buildContactInfo('신부 어머니', '류지현', '010-2808-2083', indiPinkColor),
       ],
-    )
+    ),
   );
 }
+
 
 Widget _buildContactButton(BuildContext context) {
   return OutlinedButton(
@@ -111,7 +112,7 @@ Widget _buildContactButton(BuildContext context) {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Center(
-              child: Text('연락하기', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
+              /*child: Text('연락하기', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))*/),
             content: _buildPopUpContent(),
           );
         },
@@ -126,7 +127,7 @@ Widget _buildContactButton(BuildContext context) {
         borderRadius: BorderRadius.circular(20.0),
       ),
       padding: EdgeInsets.all(16.0),
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFFFFFFFF),
       side: BorderSide(width: 0.5, color: Color.fromRGBO(41, 82, 56, 100))
     ),
   );
@@ -143,10 +144,11 @@ class Invitation extends StatelessWidget {
           Container (
             height: 150,
             width: 500.0,
-            child: Image.asset('assets/images/wizard.jpg', fit: BoxFit.contain,),
+            child: Image.asset('assets/images/wizard.png', fit: BoxFit.contain,),
           ),
           
           const SizedBox(height: 40),
+          /*
           const AutoSizeText(
             '소중하고 감사한 당신을 초대합니다.',
             style: TextStyle(
@@ -166,11 +168,19 @@ class Invitation extends StatelessWidget {
           ),
 
           const SizedBox(height: 50),
-          _buildName('유병수', '나윤옥', '아들', '유균호'),
+          _buildName('유병수', '나윤옥', '장남', '유균호'),
           const SizedBox(height: 10),
-          _buildName('심영석', '류지현', ' 딸 ', '심하영'),
+          _buildName('심영석', '류지현', '장녀', '심하영'),
           const SizedBox(height: 50),
-
+          */
+          Container (
+            height: 350.0,
+            child: Image.asset(
+              'assets/images/invitation.png',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+          const SizedBox(height: 40),
           _buildContactButton(context),
         ],
       )

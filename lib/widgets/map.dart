@@ -30,6 +30,7 @@ class _MapState extends State<Map> {
       margin: EdgeInsetsDirectional.all(20.0),
       child: Column(
         children: [
+          /*
           Text(
             '오시는 길',
             style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 1, color: Color.fromRGBO(41, 82, 56, 100))
@@ -39,6 +40,23 @@ class _MapState extends State<Map> {
             style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 3)
           ),
           Text('경기도 수원시 팔달구 팔달문로 128',),
+          */
+          Container (
+            height: 150.0,
+            child: Image.asset(
+              'assets/images/express.png',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+          const SizedBox(height: 30),
+
+          Container (
+            height: 110.0,
+            child: Image.asset(
+              'assets/images/place_info.png',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
 
           const SizedBox(height: 20),
           Container(
@@ -48,6 +66,7 @@ class _MapState extends State<Map> {
           ),
           const SizedBox(height: 10,),
 
+          /*
           Text(
             '지하철',
             style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, height: 3)
@@ -93,6 +112,14 @@ class _MapState extends State<Map> {
               '골목에 위치하여 혼잡할 수 있는점 너그러이 양해 부탁드립니다.',
               style: TextStyle(height: 2,)
             )
+            */
+            Container (
+              height: 310.0,
+              child: Image.asset(
+                'assets/images/place_info_3.png',
+                fit: BoxFit.fitWidth,
+              ),
+            ),
           ],
         ),
       ),

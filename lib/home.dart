@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Map(),
               const SizedBox(height: 20),
               Guide(),
-              const SizedBox(height: 20),
+              //const SizedBox(height: 20),
               BankAccount(),
               const SizedBox(height: 20),
               DevelopedBy(),
@@ -53,9 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
+      
       ConfettiWidget(
         confettiController: controller,
-        shouldLoop: true,
+        shouldLoop: false,
 
         blastDirectionality: BlastDirectionality.explosive,
         emissionFrequency: 0.05,
@@ -69,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
           return path;
         },
       )
+      
     ],
   );
 }

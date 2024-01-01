@@ -7,10 +7,11 @@ import 'package:wedding_invitation/widgets/imagePage.dart';
 
 class Gallery extends StatefulWidget {
   final List<ImageProvider> imagePaths = [
-    AssetImage('assets/images/white_0.JPG'),
-    AssetImage('assets/images/white_1.JPG'),
+    //AssetImage('assets/images/white_0.JPG'),
+    AssetImage('assets/images/white_1.jpg'),
+    AssetImage('assets/images/white_2.JPG'),
     AssetImage('assets/images/white_3.JPG'),
-    AssetImage('assets/images/white_4.JPG'),
+    //AssetImage('assets/images/white_4.JPG'),
     AssetImage('assets/images/white_5.JPG'),
     AssetImage('assets/images/white_6.JPG'),
     AssetImage('assets/images/white_7.JPG'),
@@ -21,10 +22,11 @@ class Gallery extends StatefulWidget {
     AssetImage('assets/images/green_4.JPG'),
     AssetImage('assets/images/blue_0.JPG'),
     AssetImage('assets/images/blue_1.JPG'),
-    AssetImage('assets/images/blue_3.JPG'),
+    AssetImage('assets/images/blue_2.JPG'),
+    AssetImage('assets/images/blue_3.jpg'),
     AssetImage('assets/images/blue_4.JPG'),
     AssetImage('assets/images/blue_5.JPG'),
-    AssetImage('assets/images/blue_6.JPG'),
+    AssetImage('assets/images/blue_6.jpg'),
   ];
   
   @override

@@ -10,8 +10,9 @@ class Guide extends StatelessWidget {
     return Container(
       width: 500.0,
       margin: EdgeInsetsDirectional.all(20.0),
-      child: const Column(
+      child: Column(
         children: [
+          /*
           Text(
             '예식 안내사항',
             style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, height: 1, color: Color.fromRGBO(41, 82, 56, 100))
@@ -27,6 +28,14 @@ class Guide extends StatelessWidget {
           Text(
             '식사는 뷔페식이며, 양쪽의 메뉴가 다르게 구성되어 있습니다.',
             style: TextStyle(height: 2,)
+          ),
+          */
+          Container (
+            height: 240.0,
+            child: Image.asset(
+              'assets/images/guide.png',
+              fit: BoxFit.fitWidth,
+            ),
           ),
         ],
       )

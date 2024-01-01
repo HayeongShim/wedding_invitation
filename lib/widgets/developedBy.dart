@@ -11,9 +11,12 @@ class DevelopedBy extends StatelessWidget {
       margin: EdgeInsetsDirectional.all(20.0),
       child: Column(
         children: [
-          Text(
-            '© 2023 심하영, Developed with Flutter',
-            style: TextStyle(fontSize: 10.0,)
+          Container (
+            height: 50.0,
+            child: Image.asset(
+              'assets/images/developed_by.png',
+              fit: BoxFit.fitWidth,
+            ),
           ),
           const SizedBox(height: 30.0),
         ],
